@@ -1,5 +1,6 @@
 "use client";
 import axios from "axios";
+import Link from "next/link";
 import React, { use, useEffect, useState } from "react";
 
 const ProductCard = () => {
@@ -66,6 +67,7 @@ const ProductCard = () => {
               <p>{e.description}</p>
               <p>{e.price}</p>
               <button onClick={() => addToCart(e)}>Add to cart</button>
+              <Link href={`/Details/${e.id}`}>View Product</Link>
               <hr />
             </div>
           );
